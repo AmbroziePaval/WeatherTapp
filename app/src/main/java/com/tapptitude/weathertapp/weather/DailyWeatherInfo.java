@@ -5,4 +5,10 @@ package com.tapptitude.weathertapp.weather;
  */
 public class DailyWeatherInfo extends WeatherInfo {
     public String mDay;
+
+    public DailyWeatherInfo(String mDay, Integer temp, WeatherConditions conditions) {
+        this.mDay = mDay;
+        super.mTemperature = temp;
+        super.mWeatherConditions = conditions;
+    }
 }

@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginStart="4dp"
-    android:layout_marginEnd="4dp"
-    android:layout_marginTop="4dp"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:id="@+id/ic_cv_weather"
@@ -15,32 +16,63 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         card_view:cardBackgroundColor="@color/cv_color"
-        card_view:cardCornerRadius="5dp" >
+        card_view:cardCornerRadius="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp"
+            android:baselineAligned="true">
 
-            <TextView
-                android:id="@+id/ic_tv_weather_temp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp"
-                tools:text="Bla bla bla"/>
+            <RelativeLayout android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1.5">
 
-            <TextView
-                android:id="@+id/ic_tv_weather_condition"
-                android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/ic_tv_weather_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    tools:text="Daily" />
+
+                <ImageView
+                    android:id="@+id/ic_iv_weather_condition"
+                    android:layout_below="@+id/ic_tv_weather_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/condition_image"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:textSize="12sp"
-                tools:text="Condition"/>
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/ic_tv_weather_temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    tools:text="Temperature" />
+
+                <TextView
+                    android:id="@+id/ic_tv_weather_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:textSize="12sp"
+                    tools:text="Condition" />
+
+            </LinearLayout>
         </LinearLayout>
+
 
     </android.support.v7.widget.CardView>
 </RelativeLayout>
