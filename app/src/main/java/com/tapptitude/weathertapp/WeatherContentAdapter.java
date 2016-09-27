@@ -1,5 +1,6 @@
 package com.tapptitude.weathertapp;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,6 +16,7 @@ import com.tapptitude.weathertapp.weather.DailyWeatherInfo;
 import com.tapptitude.weathertapp.weather.WeatherConditions;
 import com.tapptitude.weathertapp.weather.WeatherInfo;
 import com.tapptitude.weathertapp.weather.utils.TemperatureColorPicker;
+import com.tapptitude.weathertapp.weather.utils.json.DataReaderJSON;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,19 +27,8 @@ import java.util.List;
 public class WeatherContentAdapter extends RecyclerView.Adapter<WeatherContentAdapter.WeatherContentVH> {
     private List<WeatherInfo> mWeatherInfoList;
 
-    public WeatherContentAdapter() {
-        this.mWeatherInfoList = new ArrayList<>();
-        mWeatherInfoList.add(new DailyWeatherInfo("Monday", 0, WeatherConditions.SNOW));
-        mWeatherInfoList.add(new DailyWeatherInfo("Monday2", 5, WeatherConditions.SNOW));
-        mWeatherInfoList.add(new DailyWeatherInfo("Monday3", 7, WeatherConditions.RAIN));
-        mWeatherInfoList.add(new DailyWeatherInfo("Tuesday", 12, WeatherConditions.RAIN));
-        mWeatherInfoList.add(new DailyWeatherInfo("Wednesday", 18, WeatherConditions.FOG));
-        mWeatherInfoList.add(new DailyWeatherInfo("Wednesday", 20, WeatherConditions.CLEAR));
-        mWeatherInfoList.add(new DailyWeatherInfo("Wednesday", 22, WeatherConditions.FOG));
-        mWeatherInfoList.add(new DailyWeatherInfo("Thursday", 25, WeatherConditions.CLOUDS));
-        mWeatherInfoList.add(new DailyWeatherInfo("Friday", 30, WeatherConditions.CLOUDS));
-        mWeatherInfoList.add(new DailyWeatherInfo("Saturday", 35, WeatherConditions.CLEAR));
-        mWeatherInfoList.add(new DailyWeatherInfo("Sunday", 44, WeatherConditions.CLEAR));
+    public WeatherContentAdapter(Context context) {
+        this.mWeatherInfoList = DataReaderJSON.getWeatherData(context);
     }
 
     @Override

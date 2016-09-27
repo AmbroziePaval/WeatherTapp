@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mWeatherContentRV = (RecyclerView) findViewById(R.id.am_rv_dailyWeatherContent);
-        mWeatherContentRV.setAdapter(new WeatherContentAdapter());
+        WeatherContentAdapter weatherAdapter = new WeatherContentAdapter(getApplicationContext());
+        mWeatherContentRV.setAdapter(weatherAdapter);
         mWeatherContentRV.setLayoutManager(new LinearLayoutManager(this));
         mWeatherContentRV.setItemAnimator(new DefaultItemAnimator());
     }

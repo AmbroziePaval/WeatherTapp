@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">WeatherTapp</string>
     <string name="condition_image">Condition Image</string>
+    <string name="deleteItemString">x</string>
 </resources>

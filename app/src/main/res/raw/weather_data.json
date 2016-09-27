@@ -1,0 +1,60 @@
+{
+  "weather_data": {
+    "monday1": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "tuesday1": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "wednesday1": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "thursday1": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "friday1": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "saturday1": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "sunday1": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "monday2": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "tuesday2": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "wednesday2": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "thursday2": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "friday2": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "saturday2": {
+      "cond": "clouds",
+      "temp": 0
+    },
+    "sunday2": {
+      "cond": "clouds",
+      "temp": 0
+    }
+  }
+}
