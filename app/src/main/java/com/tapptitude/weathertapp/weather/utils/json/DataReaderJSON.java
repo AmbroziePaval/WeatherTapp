@@ -31,7 +31,6 @@ public class DataReaderJSON {
             inputStream.read(buffer);
             inputStream.close();
             String json = new String(buffer);
-//            JSONObject jsonObject = new JSONObject(json);
 
             return parseJSONWeatherData(json);
         } catch (IOException ignored) {
@@ -43,14 +42,18 @@ public class DataReaderJSON {
     private static List<WeatherInfo> parseJSONWeatherData(String json) {
         List<WeatherInfo> weatherInfoList = new ArrayList<>();
 
-        Gson gson = new Gson();
-        WeatherDataJSON weatherDataJSON = gson.fromJson(json, WeatherDataJSON.class);
-
-        for(String day : weatherDataJSON.getWeatherData().keySet()){
-            ItemInfoJSON itemInfoJSON = weatherDataJSON.getWeatherData().get(day);
-            WeatherConditions weatherConditions = WeatherConditions.valueOf(itemInfoJSON.getCond().toUpperCase());
-            DailyWeatherInfo dailyWeatherInfo = new DailyWeatherInfo(day, itemInfoJSON.getTemp(), weatherConditions);
-            weatherInfoList.add(dailyWeatherInfo);
+        try {
+            JSONObject weatherDataJSON = new JSONObject(json);
+            JSONArray weatherDataArray = weatherDataJSON.getJSONArray("weather_info");
+            for (int i = 0; i < weatherDataArray.length(); i++) {
+                JSONObject entry = weatherDataArray.getJSONObject(i);
+                String day = entry.keys().next();
+                JSONObject info = entry.getJSONObject(day);
+                String condition = info.getString("cond");
+                int temp = info.getInt("temp");
+                weatherInfoList.add(new DailyWeatherInfo(day, temp, WeatherConditions.valueOf(condition.toUpperCase())));
+            }
+        } catch (JSONException ignored) {
         }
 
         return weatherInfoList;

@@ -1,60 +1,87 @@
 {
-  "weather_data": {
-    "monday1": {
-      "cond": "clouds",
-      "temp": 0
+  "weather_info": [
+    {
+      "monday1": {
+        "cond": "snow",
+        "temp": 0
+      }
     },
-    "tuesday1": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "tuesday1": {
+        "cond": "snow",
+        "temp": 3
+      }
     },
-    "wednesday1": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "wednesday1": {
+        "cond": "snow",
+        "temp": 5
+      }
     },
-    "thursday1": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "thursday1": {
+        "cond": "fog",
+        "temp": 9
+      }
     },
-    "friday1": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "friday1": {
+        "cond": "fog",
+        "temp": 13
+      }
     },
-    "saturday1": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "saturday1": {
+        "cond": "rain",
+        "temp": 16
+      }
     },
-    "sunday1": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "sunday1": {
+        "cond": "rain",
+        "temp": 17
+      }
+    },{
+      "monday2": {
+        "cond": "clouds",
+        "temp": 19
+      }
     },
-    "monday2": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "tuesday2": {
+        "cond": "clouds",
+        "temp": 22
+      }
     },
-    "tuesday2": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "wednesday2": {
+        "cond": "clouds",
+        "temp": 24
+      }
     },
-    "wednesday2": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "thursday2": {
+        "cond": "clouds",
+        "temp": 28
+      }
     },
-    "thursday2": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "friday2": {
+        "cond": "clear",
+        "temp": 33
+      }
     },
-    "friday2": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "saturday2": {
+        "cond": "clear",
+        "temp": 37
+      }
     },
-    "saturday2": {
-      "cond": "clouds",
-      "temp": 0
-    },
-    "sunday2": {
-      "cond": "clouds",
-      "temp": 0
+    {
+      "sunday2": {
+        "cond": "clear",
+        "temp": 40
+      }
     }
-  }
+  ]
 }
