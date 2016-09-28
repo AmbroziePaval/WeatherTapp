@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
     android:layout_marginEnd="4dp"
     android:layout_marginStart="4dp"
     android:layout_marginTop="2dp"
-    android:layout_marginBottom="2dp"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
@@ -15,19 +15,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        card_view:cardBackgroundColor="@color/cv_color"
+        android:longClickable="true"
         card_view:cardCornerRadius="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="100dp"
             android:layout_marginBottom="4dp"
-            android:baselineAligned="true">
+            android:baselineAligned="true"
+            android:orientation="horizontal">
 
-            <RelativeLayout android:layout_height="match_parent"
+            <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1.5">
+                android:layout_height="match_parent"
+                android:layout_weight="2">
 
                 <TextView
                     android:id="@+id/ic_tv_weather_selection"
@@ -35,21 +36,22 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:textAllCaps="true"
+                    android:textStyle="bold"
                     tools:text="Daily" />
 
                 <ImageView
                     android:id="@+id/ic_iv_weather_condition"
-                    android:layout_below="@+id/ic_tv_weather_selection"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:contentDescription="@string/condition_image"/>
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ic_tv_weather_selection"
+                    android:contentDescription="@string/condition_image" />
             </RelativeLayout>
 
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="5"
                 android:layout_height="match_parent"
+                android:layout_weight="5"
                 android:orientation="vertical">
 
                 <TextView
@@ -59,26 +61,40 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
+                    android:shadowColor="@android:color/holo_blue_light"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:textStyle="bold"
                     android:textSize="20sp"
                     tools:text="Temperature" />
 
                 <TextView
                     android:id="@+id/ic_tv_weather_condition"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:textSize="12sp"
                     tools:text="Condition" />
 
+                <Button
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textAlignment="textEnd"
+                    android:text="Learn more"/>
+
             </LinearLayout>
 
             <Button
+                android:id="@+id/ic_b_remove"
                 style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_height="match_parent"
                 android:background="@android:color/transparent"
-                android:text="@string/deleteItemString"/>
+                android:text="@string/deleteItemString" />
         </LinearLayout>
 
 

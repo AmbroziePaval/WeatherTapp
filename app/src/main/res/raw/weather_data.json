@@ -1,84 +1,84 @@
 {
   "weather_info": [
     {
-      "monday1": {
+      "monday": {
         "cond": "snow",
         "temp": 0
       }
     },
     {
-      "tuesday1": {
+      "tuesday": {
         "cond": "snow",
         "temp": 3
       }
     },
     {
-      "wednesday1": {
+      "wednesday": {
         "cond": "snow",
         "temp": 5
       }
     },
     {
-      "thursday1": {
+      "thursday": {
         "cond": "fog",
         "temp": 9
       }
     },
     {
-      "friday1": {
+      "friday": {
         "cond": "fog",
         "temp": 13
       }
     },
     {
-      "saturday1": {
+      "saturday": {
         "cond": "rain",
         "temp": 16
       }
     },
     {
-      "sunday1": {
+      "sunday": {
         "cond": "rain",
         "temp": 17
       }
     },{
-      "monday2": {
+      "monday": {
         "cond": "clouds",
         "temp": 19
       }
     },
     {
-      "tuesday2": {
+      "tuesday": {
         "cond": "clouds",
         "temp": 22
       }
     },
     {
-      "wednesday2": {
+      "wednesday": {
         "cond": "clouds",
         "temp": 24
       }
     },
     {
-      "thursday2": {
+      "thursday": {
         "cond": "clouds",
         "temp": 28
       }
     },
     {
-      "friday2": {
+      "friday": {
         "cond": "clear",
         "temp": 33
       }
     },
     {
-      "saturday2": {
+      "saturday": {
         "cond": "clear",
         "temp": 37
       }
     },
     {
-      "sunday2": {
+      "sunday": {
         "cond": "clear",
         "temp": 40
       }
