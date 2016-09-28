@@ -8,7 +8,7 @@
     },
     {
       "tuesday": {
-        "cond": "snow",
+        "cond": "clear",
         "temp": 3
       }
     },
@@ -67,7 +67,7 @@
     },
     {
       "friday": {
-        "cond": "clear",
+        "cond": "rain",
         "temp": 33
       }
     },
