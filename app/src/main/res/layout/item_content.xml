@@ -37,7 +37,7 @@
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textStyle="bold"
-                    tools:text="Daily" />
+                    tools:text="Time" />
 
                 <ImageView
                     android:id="@+id/ic_iv_weather_condition"
