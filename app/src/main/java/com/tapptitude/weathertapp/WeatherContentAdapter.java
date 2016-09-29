@@ -71,13 +71,17 @@ public class WeatherContentAdapter extends RecyclerView.Adapter<WeatherContentAd
         });
     }
 
-    public void swapItemsInList(int position, int target){
+    public WeatherInfo getItemDetails(int position) {
+        return mWeatherInfoList.get(position);
+    }
+
+    public void swapItemsInList(int position, int target) {
         WeatherInfo draggedCard = mWeatherInfoList.get(position);
         mWeatherInfoList.remove(position);
         mWeatherInfoList.add(target, draggedCard);
     }
 
-    public void removeItem(int position){
+    public void removeItem(int position) {
         mWeatherInfoList.remove(position);
         notifyItemRemoved(position);
 //        notifyItemRangeRemoved(position, mWeatherInfoList.size());

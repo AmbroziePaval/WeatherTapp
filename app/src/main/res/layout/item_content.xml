@@ -77,13 +77,19 @@
                     android:textSize="12sp"
                     tools:text="Condition" />
 
-                <Button
-                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:textAlignment="textEnd"
-                    android:text="Learn more"/>
+                    android:text="Swipe left for details"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textAlignment="textEnd"
+                    android:text="Swipe right to delete"/>
 
             </LinearLayout>
 
